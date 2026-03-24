@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambridge Institute of Technology | North Campus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <body>
+    <div class="video-bg-container">
+        <video autoplay muted loop id="bgVideo">
+            <source src="Firefly i want this logo to convert to 3d image and it should be viewed in 3d space 137268.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="landingPage">
+    </div>
+
+<div id="dashboardSection" class="dashboard-wrapper" style="display:none; position: relative; z-index: 20;">
+    <div class="dashboard-header">
+        <h2 id="userGreeting">Portal</h2>
+        <h1 id="userNameDisplay" class="center-name"></h1> 
+
+        <div class="profile-container">
+            <img id="headerProfileIcon" src="profile-logo.png" alt="User Profile" class="profile-icon" onclick="toggleProfile()">
+            <div id="profileDropdown" class="profile-card glass" style="display:none;">
+                <div id="profileContent"></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="portalGrid" class="dashboard-grid"></div>
+</div>
+
+    <header class="top-header">
+    
+
+    <header class="top-header">
+        <div class="header-content">
+            <img src="logo2.png" alt="Small Logo" class="header-logo">
+            <span class="header-text">CIT-NC</span>
+        </div>
+    </header>
+
+    <div id="landingPage">
+    <div class="main-center-wrapper">
+        <div class="logo-wrap">
+            <img src="logo.png" alt="College Logo" class="centered-logo">
+            <h6 class="institute-name">CAMBRIDGE INSTITUTE OF TECHNOLOGY<br>NORTH CAMPUS<br>Kundana Bengaluru - 562110</h6>
+            <h1 id="motto"></h1>
+        </div>
+
+        <div class="center-button-container">
+            <button class="btn btn-signin" onclick="openModal('signInModal')">Sign In</button>
+            <button class="btn btn-signup" onclick="openModal('signUpModal')">Sign Up</button>
+        </div>
+    </div>
+</div>
+    <div id="detailsModal" class="modal">
+        <div class="modal-content glass">
+            <h2 id="detailsTitle">Complete Your Profile</h2>
+            <div id="formFieldsContainer"></div>
+        </div>
+    </div>
+
+    <div id="dashboardSection" class="dashboard-wrapper" style="display:none;">
+        <div class="dashboard-header">
+            <h2 id="userGreeting">Portal</h2>
+            <h1 id="userNameDisplay" class="center-name"></h1> 
+
+            <div class="profile-container">
+                <img id="headerProfileIcon" src="profile-logo.png" alt="User Profile" class="profile-icon" onclick="toggleProfile()">
+                
+                <div id="profileDropdown" class="profile-card glass" style="display:none;">
+                    <div id="profileContent"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="portalGrid" class="dashboard-grid"></div>
+    </div>
+
+    <div id="signInModal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-btn" onclick="closeModal('signInModal')">&times;</span>
+            <h2>Welcome Back</h2>
+            <form onsubmit="event.preventDefault(); handleSignIn();">
+                <input type="email" id="loginEmail" placeholder="College Email" class="input-field" required>
+                <input type="password" id="loginPass" placeholder="Password" class="input-field" required>
+                <button type="submit" class="btn-signin-modal">Enter Portal</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="signUpModal" class="modal">
+        <div class="modal-content glass">
+            <span class="close-btn" onclick="closeModal('signUpModal')">&times;</span>
+            
+            <div id="selectionStep">
+                <h3>Join as...</h3>
+                <div class="user-options">
+                    <button type="button" class="opt-btn" onclick="showRegForm('Student')">Student</button>
+                    <button type="button" class="opt-btn" onclick="showRegForm('Faculty')">Faculty</button>
+                    <button type="button" class="opt-btn" onclick="showRegForm('Staff')">Staff</button>
+                    <button type="button" class="opt-btn" onclick="showRegForm('Admin')">Admin</button>
+                </div>
+            </div>
+
+            <div id="registrationForm" style="display:none;">
+                <h3 id="selectedUserTitle">Register</h3>
+                <div id="staffSubOptions" style="display:none; margin-bottom: 15px;">
+                    <select id="staffDepartment" class="input-field">
+                        <option value="Transport">Transport</option>
+                        <option value="Cleaning">Cleaning</option>
+                    </select>
+                </div>
+
+                <form onsubmit="event.preventDefault(); handleFinalSignup();">
+                    <input type="text" id="regName" placeholder="Full Name" class="input-field" required>
+                    <input type="email" id="regEmail" placeholder="College Email" class="input-field" required>
+                    <input type="password" id="regPass" placeholder="Create Password" class="input-field" required>
+                    <button type="submit" class="btn-signup-modal">Create Account</button>
+                    <p style="margin-top:15px;">
+                        <a href="javascript:void(0)" onclick="backToSelection()" style="color: #fff; font-size: 12px; text-decoration: none;">← Back</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="profile-trigger" onclick="toggleProfileCard()">
+    <img src="your-profile-image.png" alt="Profile" class="profile-avatar-img">
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
